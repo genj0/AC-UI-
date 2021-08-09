@@ -1,0 +1,558 @@
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("./fonts/gilroy-bold.eot"); /* IE 9 Compatibility Mode */
+  src: url("./fonts/gilroy-bold.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("./fonts/gilroy-bold.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/gilroy-bold.woff") format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./fonts/gilroy-bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/gilroy-bold.svg#gilroy-bold")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("./fonts/gilroy-regular.eot"); /* IE 9 Compatibility Mode */
+  src: url("./fonts/gilroy-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE < 9 */ url("./fonts/gilroy-regular.woff2") format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/gilroy-regular.woff")
+      format("woff"),
+    /* Firefox >= 3.6, any other modern browser */
+      url("./fonts/gilroy-regular.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/gilroy-regular.svg#gilroy-regular")
+      format("svg"); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src: url("./fonts/LatoRegular/LatoRegular.eot");
+  src: url("./fonts/LatoRegular/LatoRegular.eot?#iefix")
+      format("embedded-opentype"),
+    url("./fonts/LatoRegular/LatoRegular.woff") format("woff"),
+    url("./fonts/LatoRegular/LatoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("./fonts/LatoBold/LatoBold.eot");
+  src: url("./fonts/LatoBold/LatoBold.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/LatoBold/LatoBold.woff") format("woff"),
+    url("./fonts/LatoBold/LatoBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  background: #1c1e22;
+}
+
+.controller-wrapper,
+.controller-inner-wrapper {
+  width: 498px;
+  background: linear-gradient(180deg, #424750 0%, #202326 100%);
+  margin: 0 auto;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controller-wrapper {
+  height: 1078px;
+}
+
+.controller-inner-wrapper {
+  height: 935px;
+}
+
+.controller {
+  height: 1074px;
+  width: 494px;
+  border-radius: 60px;
+  position: relative;
+  margin: 30px auto;
+  background: linear-gradient(180deg, #353a40 0%, #16171b 100%);
+  overflow: hidden;
+}
+
+.controller header {
+  display: flex;
+  justify-content: space-between;
+  padding: 43px 43px 37px;
+}
+
+.controller-inner {
+  height: 931px;
+  width: 494px;
+  border-radius: 60px;
+  position: absolute;
+  left: 1px;
+  top: 145px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #353a40 0%, #16171b 100%);
+}
+
+.controller-inner header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 40px;
+}
+
+.controller-inner header h2 {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.controller-inner header p {
+  font: normal 18px LatoRegular;
+  color: rgba(127, 132, 137, 1);
+  margin: 10px 0;
+}
+
+h1,
+h2 {
+  color: #fff;
+}
+
+h2 {
+  font: bold 24px LatoBold;
+}
+
+h3 {
+  font: normal 18px LatoRegular;
+}
+
+h2,
+h3,
+nav article {
+  text-align: center;
+}
+
+/* SCALE */
+
+.drag {
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  left: 218px;
+
+  background: #17181c;
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.a-c-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px;
+  align-self: center;
+  height: 323px;
+  width: 323px;
+  margin-top: 40px;
+  background: linear-gradient(318.21deg, #131314 14.05%, #202428 85.29%);
+  box-shadow: 20px 20px 70px #141415, -20px -20px 70px #485057;
+  border-radius: 1000px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.stick {
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  border-radius: 20px;
+}
+
+.a-c-body .stick:nth-of-type(1) {
+  background: #016cbc;
+  transform: rotate(-135deg);
+  top: 465px;
+  left: 130px;
+}
+
+.a-c-body .stick:nth-of-type(2) {
+  background: #0c95e8;
+  box-shadow: 0px 0px 10px rgba(10, 138, 218, 0.25);
+  transform: rotate(-90deg);
+  top: 334px;
+  left: 67px;
+}
+
+.a-c-body .stick:nth-of-type(3) {
+  background: #11a8fd;
+  box-shadow: 0px 0px 10px rgba(10, 138, 218, 0.75);
+  transform: rotate(-45deg);
+  top: 201px;
+  left: 123px;
+}
+
+.a-c-body .stick:nth-of-type(4) {
+  top: 152px;
+  background: #0e9bef;
+  box-shadow: 0px 0px 10px #0a8ada;
+}
+
+.a-c-body .stick:nth-of-type(5) {
+  background: #0a8ada;
+  box-shadow: 0px 0px 10px #0a8ada;
+  transform: rotate(-135deg);
+  top: 201px;
+  right: 122px;
+}
+
+.a-c-body .stick:nth-of-type(6) {
+  background: #15171c;
+  transform: rotate(-90deg);
+  top: 334px;
+  right: 67px;
+}
+
+.a-c-body .stick:nth-of-type(7) {
+  background: #15171c;
+  transform: rotate(-45deg);
+  top: 465px;
+  right: 130px;
+}
+
+.a-c-body h1 {
+  font: bold 40px Gilroy-Bold;
+  margin: 0;
+}
+
+.a-c-body h3 {
+  font: normal 18px Gilroy-Regular;
+  margin: 0;
+}
+
+svg {
+  position: absolute;
+}
+
+svg.active {
+  left: 97px;
+  top: 188px;
+}
+
+svg.inactive {
+  left: 128px;
+  top: 187px;
+}
+
+.scale-active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 1000px;
+  background: conic-gradient(
+    from 90deg at 45.18% 50.04%,
+    #005696 -91.86deg,
+    #11a8fd 41.25deg,
+    #005696 268.14deg,
+    #11a8fd 401.25deg
+  );
+  transform: rotate(180deg);
+}
+
+.scale-inactive {
+  width: 267.83px;
+  height: 299.67px;
+  background: #1f2124;
+  mix-blend-mode: normal;
+  opacity: 0.17;
+  box-shadow: inset 0px 1px 3px rgba(170, 187, 222, 0.542887);
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.marker {
+  position: absolute;
+  right: 131px;
+  top: 231px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 49.13px;
+  height: 49.13px;
+  background: linear-gradient(320.66deg, #141515 14.75%, #2e3236 84.81%);
+  border: 1px solid #1b1d1e;
+  box-sizing: border-box;
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+  transform: rotate(180deg);
+}
+
+.marker div {
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(320.66deg, #0172be 14.75%, #0f9bee 84.81%);
+  border-radius: 100px;
+  transform: rotate(180deg);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1000px;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(318.21deg, #131314 14.05%, #202428 85.29%);
+}
+
+.slider-wrapper {
+  align-self: center;
+  margin-top: 40px;
+}
+
+.markers {
+  justify-content: space-between;
+  display: flex;
+  width: 412px;
+  margin-left: 3px;
+  margin-bottom: 10px;
+}
+
+.markers span {
+  font: normal 14px LatoRegular;
+  color: #7f8489;
+}
+
+/* SLIDER */
+
+.input-wrapper {
+  position: relative;
+  height: 30px;
+  width: 430px;
+}
+
+input[type="range"] {
+  width: 414px;
+  height: 10px;
+  cursor: pointer;
+  background-color: #202226;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.75), inset -2px -2px 2px #4e5154;
+  border-radius: 100px;
+  outline: none;
+}
+
+input[type="range"],
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 200px;
+  height: 10px;
+  background: linear-gradient(to right, #016bb8, #0782db, #0f9ceb, #11a8fd),
+    transparent;
+  background-size: 20% 100%;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+  background: url("marker.png");
+  background-size: contain;
+  margin-top: -9px;
+  box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.35);
+  border-radius: 30px;
+}
+
+footer.mode {
+  margin-top: 30px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+  color: #7f8489;
+}
+
+/* BUTTONS */
+
+.button-wrapper {
+  position: relative;
+  width: 63px;
+  height: 63px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-outer {
+  width: 61px;
+  height: 61px;
+  background: linear-gradient(318.21deg, #2c3036 14.05%, #31343c 85.29%);
+  box-shadow: 7px 7px 30px #1f2427, -7px -7px 30px #485057;
+  border-radius: 30px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-outer div {
+  width: 63px;
+  height: 63px;
+  background: linear-gradient(318.21deg, #2c3036 14.05%, #31343c 85.29%);
+  filter: blur(0.5px);
+  border-radius: 30px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-outer div div {
+  width: 57px;
+  height: 57px;
+  background: linear-gradient(320.66deg, #2f353a 14.75%, #1c1f22 84.81%);
+  border-radius: 30px;
+  transform: rotate(180deg);
+}
+
+.button-outer div div div {
+  width: 57px;
+  height: 57px;
+  background: linear-gradient(320.66deg, #2f353a 14.75%, #1c1f22 84.81%);
+  border-radius: 30px;
+  transform: rotate(180deg);
+}
+
+i,
+.button-wrapper span,
+.button-turn-off span,
+.button-mode-wrapper span {
+  position: absolute;
+  color: rgba(127, 132, 137, 1);
+  transform: rotate(180deg);
+  z-index: 9999;
+}
+
+.button-mode-wrapper,
+.button-off-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.button-mode,
+.button-turn-off {
+  width: 78.49px;
+  height: 78.49px;
+  transform: rotate(-180deg);
+  background: linear-gradient(318.21deg, #1d2328 14.05%, #131314 85.29%);
+  box-shadow: 14px 14px 40px rgba(16, 16, 18, 0.75), -7px -7px 30px #262e32;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-mode div,
+.button-turn-off div {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(318.21deg, #1d2328 14.05%, #131314 85.29%);
+  border-radius: 1000px;
+  filter: blur(1px);
+  transform: rotate(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-mode div div,
+.button-turn-off div div {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(320.66deg, #2f353a 14.75%, #1c1f22 84.81%);
+  box-shadow: inset 0px 0px 3px rgba(63, 63, 63, 0.45);
+  border-radius: 100px;
+  transform: rotate(180deg);
+}
+
+.button-mode div div div,
+.button-turn-off div div div {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(320.66deg, #2f353a 14.75%, #1c1f22 84.81%);
+  border-radius: 100px;
+  transform: rotate(180deg);
+}
+
+/* BUTTONS HOVER */
+
+.button-wrapper:hover .button-outer div div div,
+.button-mode-wrapper:hover .button-mode div div div,
+.button-off-wrapper:hover .button-turn-off div div div {
+  background: linear-gradient(
+    320.66deg,
+    #2a87d3 14.75%,
+    #1f66a4 45.12%,
+    #113c67 84.81%
+  );
+  cursor: pointer;
+}
+
+.button-wrapper:hover i,
+.button-mode-wrapper:hover i,
+.button-mode-wrapper:hover span,
+.button-off-wrapper:hover i {
+  color: #fff;
+}
+
+/* BUTTONS ACTIVE */
+
+.button-wrapper.active .button-outer,
+.button-off-wrapper.active .button-turn-off,
+.button-mode-wrapper.active .button-mode {
+  background: linear-gradient(318.21deg, #11a8fd 14.05%, #0081c9 85.29%);
+  box-shadow: 10px 15px 40px #000000, -10px -15px 40px #2f393d;
+}
+
+.button-wrapper.active .button-outer div,
+.button-off-wrapper.active .button-turn-off div,
+.button-mode-wrapper.active .button-mode div {
+  background: linear-gradient(320.66deg, #11a8fd 14.75%, #0081c9 84.81%);
+}
+
+.button-wrapper.active .button-outer div div,
+.button-off-wrapper.active .button-turn-off div div,
+.button-mode-wrapper.active .button-mode div div {
+  background: linear-gradient(320.66deg, #005ea3 14.75%, #11a8fd 84.81%);
+  border: 1px solid #058dd9;
+  box-sizing: border-box;
+}
+
+.button-wrapper.active .button-outer div div div,
+.button-off-wrapper.active .button-turn-off div div div,
+.button-mode-wrapper.active .button-mode div div div {
+  background: linear-gradient(320.66deg, #016bb8 14.75%, #11a8fd 84.81%);
+}
+
+.button-wrapper.active i,
+.button-mode-wrapper.active i,
+.button-mode-wrapper.active span,
+.button-off-wrapper.active i {
+  color: #fff;
+}
